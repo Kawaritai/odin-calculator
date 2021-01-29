@@ -12,9 +12,9 @@
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <div class="d-inline-block mt-spacing">
+    <div class="d-inline-block mt-spacing noselect">
       <p id="history" class="m-0 text-left h4"></p>
-      <div id="calc-container" class="noselect">
+      <div id="calc-container">
         <div class="row">
           <div id="calc-display" class="rounded-3"></div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-sm"><button class="calc-btn"></button></div>
             <div class="col-sm"><button id="c-btn" class="calc-btn">C</button></div>
             <div class="col-sm"><button id="ce-btn" class="calc-btn">CE</button></div>
-            <div class="col-sm"><button class="calc-btn">DEL</button></div>
+            <div class="col-sm"><button id = "del-btn" class="calc-btn">DEL</button></div>
           </div>
           <div class="row">
             <div class="col-sm"><button data-num="7" class="calc-btn num-btn">7</button></div>
@@ -46,12 +46,12 @@
           </div>
           <div class="row">
             <div class="col-sm"><button data-num="0" class="calc-btn num-btn">0</button></div>
-            <div class="col-sm"><button data-action="." class="calc-btn action-btn">.</button></div>
-            <div class="col-sm"><button data-action="=" class="calc-btn action-btn">=</button></div>
+            <div class="col-sm"><button id="decimal-btn" data-action="." class="calc-btn action-btn">.</button></div>
+            <div class="col-sm"><button id="equals-btn" data-action="=" class="calc-btn action-btn">=</button></div>
             <div class="col-sm"><button data-op="/" class="calc-btn op-btn">/</button></div>
           </div>
         </div>
-    </div>
+      </div>
       <!-- end calc-btn-group -->
     </div>
     <!-- end calc-container -->
