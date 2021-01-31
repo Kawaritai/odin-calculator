@@ -3,6 +3,11 @@
 body {
   text-align: center;
   font-family: "Big Shoulders Display";
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(235, 235, 235, 1) 100%
+  );
 }
 
 #calc-container {
@@ -29,6 +34,17 @@ body {
   height: 80px;
   margin: 3px;
   font-size: 40px;
+
+  transition: background-color 0.2s ease-out;
+}
+
+.calc-btn:hover:enabled {
+  background-color: rgb(214, 214, 214);
+}
+
+.calc-btn:disabled {
+  border-color: rgb(118, 118, 118) rgb(137, 137, 137);
+  background-color: rgba(239, 239, 239, 0.45);
 }
 
 .mt-spacing {
@@ -58,7 +74,7 @@ body {
 }
 
 #history-container {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(214, 214, 214);
   border: 1px solid black;
   border-radius: 0.1rem;
 
