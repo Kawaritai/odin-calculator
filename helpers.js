@@ -108,13 +108,18 @@ function formatNum(num) {
   if (num === 0) {
     return 0
   }
-  // SI notation for numbers larger/smaller than 10 significant figures
-  if (num >= 10 ** 10 || num < 10 ** -6) {
+  // SI notation for numbers larger than 10 significant figures
+  if (num >= 10 ** 10) {
     return num.toPrecision(6);
   }
   let stripped = num.toString().replace(/[-]/g, "");
   let intLength = Math.round(stripped).toString().length;
-  return Math.round(num * 10 ** (10 - intLength)) / 10 ** (10 - intLength);
+  let displayNum = Math.round(num * 10 ** (10 - intLength)) / 10 ** (10 - intLength)
+  // Number is too small to be displayed while rounded
+  if (displayNum === 0) {
+    return num.toPrecision(6);
+  }
+  return displayNum;
 }
 
 function updateDecimalNode() {

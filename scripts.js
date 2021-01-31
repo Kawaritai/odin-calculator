@@ -153,4 +153,5 @@ document.querySelector("#plus-minus-btn").addEventListener("click", () => {
     displayNode.textContent = displayNode.textContent.slice(1);
     displayNum = displayNum.slice(1);
   }
+  await = false;
 });
