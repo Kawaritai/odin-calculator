@@ -104,8 +104,9 @@ function clearValues() {
 }
 
 function formatNum(num) {
-  // Displaying for numbers >= 10**
-  if (parseFloat(num) >= 10 ** 10) {
+  num = parseFloat(num);
+  // SI notation for numbers larger/smaller than 10 significant figures
+  if (num >= 10 ** 10 || num < 10 ** -6) {
     return num.toPrecision(6);
   }
   let stripped = num.toString().replace(/[-]/g, "");
