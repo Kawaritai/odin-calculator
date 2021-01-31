@@ -114,12 +114,12 @@ function formatNum(num) {
   }
   let stripped = num.toString().replace(/[-]/g, "");
   let intLength = Math.round(stripped).toString().length;
-  let displayNum = Math.round(num * 10 ** (10 - intLength)) / 10 ** (10 - intLength)
+  let newNum = Math.round(num * 10 ** (10 - intLength)) / 10 ** (10 - intLength)
   // Number is too small to be displayed while rounded
-  if (displayNum === 0) {
+  if (newNum === 0) {
     return num.toPrecision(6);
   }
-  return displayNum;
+  return newNum;
 }
 
 function updateDecimalNode() {
