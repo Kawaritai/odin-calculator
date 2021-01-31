@@ -105,6 +105,9 @@ function clearValues() {
 
 function formatNum(num) {
   num = parseFloat(num);
+  if (num === 0) {
+    return 0
+  }
   // SI notation for numbers larger/smaller than 10 significant figures
   if (num >= 10 ** 10 || num < 10 ** -6) {
     return num.toPrecision(6);
