@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Display");
+
 body {
   text-align: center;
+  font-family: "Big Shoulders Display";
 }
 
 #calc-container {
-  height: 650px;
+  height: 560px;
   display: inline-block;
 }
 
@@ -18,14 +21,14 @@ body {
 
   background-color: rgb(239, 239, 239);
   border: 2px solid black;
-  font-size: 52px;
+  font-size: 70px;
 }
 
 .calc-btn {
   width: 80px;
   height: 80px;
   margin: 3px;
-  font-size: 25px;
+  font-size: 40px;
 }
 
 .mt-spacing {
@@ -52,4 +55,24 @@ body {
 
 #history {
   height: 1.2rem;
+}
+
+#history-container {
+  background-color: rgb(231, 231, 231);
+  border: 1px solid black;
+  border-radius: 0.1rem;
+
+  height: 34px;
+  padding: 3px 8px;
+  text-align: left !important;
+  width: 246px;
+
+  position: relative;
+  left: -9px;
+}
+
+#app-container {
+  background-color: rgb(150, 150, 150);
+  border: 2px solid black;
+  padding: 24px 42px;
 }
