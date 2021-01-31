@@ -47,6 +47,7 @@ document.addEventListener("keydown", (e) => {
         break;
 
       case "Enter":
+        e.preventDefault();
       case "=":
         document.querySelector(`#equals-btn`).click();
         break;
