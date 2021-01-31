@@ -6,7 +6,7 @@ body {
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,
-    rgba(235, 235, 235, 1) 100%
+    rgba(230, 230, 230, 1) 100%
   );
 }
 
@@ -36,6 +36,10 @@ body {
   font-size: 40px;
 
   transition: background-color 0.2s ease-out;
+}
+
+.op-btn {
+  font-size: 50px;
 }
 
 .calc-btn:hover:enabled {
